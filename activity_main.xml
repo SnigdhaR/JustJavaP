@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context="com.example.mahe.justjava.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+        <EditText
+            android:id="@+id/name_edittxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Name"/>
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:text="@string/toppings"
+            android:layout_marginBottom="16dp"/>
+        <CheckBox
+            android:id="@+id/whipped_cream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Whipped cream"
+            android:textSize="16sp"
+            android:paddingLeft="24dp" />
+        <CheckBox
+            android:id="@+id/chocolate_topping"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chocolate"
+            android:textSize="16sp"
+            android:paddingLeft="24dp"
+            android:layout_marginBottom="16dp"/>
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:text="@string/quantity"
+            android:layout_marginBottom="16dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="-"
+                android:layout_marginBottom="16dp"
+                android:onClick="decrement"
+                android:layout_marginRight="8dp"/>
+            <TextView
+                android:id="@+id/quantity_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"/>
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:text="+"
+                android:onClick="increment"
+                android:layout_marginLeft="8dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PRICE PER CUP OF COFFEE : $5    Whipped cream : $1    Chocolate topping : $2"
+            android:textSize="12sp"
+            android:layout_marginBottom="18dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order"
+            android:textSize="16sp"
+            android:onClick="submitOrder"/>
+    </LinearLayout>
+
+</ScrollView>
